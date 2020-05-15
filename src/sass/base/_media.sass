@@ -1,0 +1,237 @@
+@media ( max-width: 1399px )
+    html, body
+        font-size: 15px
+
+@media ( max-width: 1199px )
+    html, body
+        font-size: 14px
+
+@media ( max-width: 992px )
+    html, body
+        font-size: 12px
+    .container
+        padding: 15px 0
+
+@media ( max-width: 868px )
+    html, body
+        font-size: 10px
+
+@media ( max-width: 768px ) 
+    .container
+        width: 60rem
+        grid-gap: 0 15px
+        font-size: 1.2rem
+        grid-template-areas: 'header header header header' 'left left left left' 'article article right right'
+        p
+            margin-block-start: .5em
+            margin-block-end: .5em
+    header
+        display: grid
+        grid-area: header
+        .title
+            padding: 5px
+            h1
+                font-size: 5rem
+                line-height: 50px
+            .right-block, .left-block
+                font-size: 1rem
+        .sub-title
+            padding: 5px 0
+            .vol, .price, h3
+                font-size: 1rem
+    article
+        display: grid
+        grid-area: article
+        margin: 5px 0 0
+        .editorial-news
+            h2
+                font-size: 4.5rem
+            h3 
+                font-size: 2rem
+        .extra
+            h2
+                font-size: 3rem
+                padding: 5px 0 0
+            h3 
+                font-size: 2rem
+        .two-blocks
+            .welcome
+                h3
+                    font-size: 3.5rem
+                &__name
+                    font-size: 3.5rem
+                span
+                    font-size: 1.5rem
+
+    .left
+        display: grid
+        grid-area: left
+        grid-template-columns: 1fr .5fr .5fr
+        grid-gap: 0 20px
+        grid-auto-flow: row
+        .meeting
+            h2 
+                font-size: 2rem
+        .impotrant
+            h2 
+                font-size: 2rem
+        .phone 
+            h2
+                font-size: 3rem
+
+    .right
+        display: grid
+        grid-area: right
+        grid-template-columns: 1fr
+        .your
+            h2
+                font-size: 2.2rem
+                padding: 5px 0
+            h3 
+                font-size: 1.2rem
+                padding: 2px 0
+        .paper
+            h2
+                font-size: 2.5rem
+            h3 
+                font-size: 1.5rem
+                line-height: 20px
+
+@media ( max-width: 650px )
+    .container
+        width: 50rem
+    .left
+        grid-template-areas: 'meeting phone' ' meeting impotrant'
+        .meeting
+            grid-area: meeting
+            h2
+                font-size: 3rem
+        .impotrant
+            grid-area: impotrant
+            grid-column: 2 / 4
+        .phone
+            grid-area: phone
+            grid-column: 2 / 4
+            img
+                width: 60%
+            a
+                font-size: 2.5rem
+    
+    article
+        .editorial-news
+            h2
+                font-size: 3.5rem
+                padding: 0 0 10px
+            h3
+                font-size: 1.5rem
+        .extra
+            h2
+                font-size: 2.5rem
+    
+    .right
+        .your
+            h2
+                font-size: 2rem
+        .paper
+            h2
+                font-size: 2rem
+
+@media ( max-width: 525px )
+    .container
+        width: 45rem
+        grid-template-areas: 'header header header header' 'left left left left' 'article article article article' 'right right right right'
+    .right
+        display: grid
+        grid-template-areas: 'your your your your' 'paper paper img img '
+        img
+            grid-area: img
+            grid-column: 2/4
+        .your
+            grid-area: your
+            grid-column: 1/6
+            padding: 0 0 10px
+        .paper
+            grid-area: paper
+            grid-column: 4/6
+
+@media ( max-width: 460px )
+    .container
+        width: 35rem
+
+    .left
+        .phone
+            h2 
+                font-size: 1.5rem
+            a
+                font-size: 1.5rem
+            img
+                margin: 10px 0
+
+@media ( max-width: 390px )
+    .container
+        width: 30rem
+    header
+        .title
+            h1
+                font-size: 4rem
+                line-height: 35px
+        .sub-title
+            h3, .price,
+                font-size: .8rem
+
+    .left
+        grid-template-areas: 'meeting meeting meeting meeting' 'phone phone phone phone' 'impotrant impotrant impotrant impotrant'
+        .meeting
+            grid-area: meeting
+            h2
+                font-size: 2.5rem
+                padding: 0 0 5px
+        .impotrant
+            grid-area: impotrant
+            h2
+                font-size: 4rem
+        .phone
+            grid-area: phone
+            img
+                width: 60%
+
+    article
+        .editorial-news
+            h2
+                font-size: 3rem
+            h3 
+                font-size: 2rem
+            img
+                width: 75%
+                float: none
+        .extra
+            h2
+                font-size: 2rem
+            h3 
+                font-size: 1.5rem
+        .two-blocks
+            .welcome
+                h3
+                    font-size: 2.5rem
+                &__name 
+                    font-size: 2.5rem
+
+    .right
+        display: grid
+        grid-template-areas: 'your your your your' 'paper paper paper paper' 'img img img img'
+        img
+            grid-column: 1/6
+            margin: 0 auto
+        .your
+            grid-column: 1/6
+            padding: 0 0 10px
+            h2
+                font-size: 3rem
+            h3 
+                font-size: 1.5rem
+        .paper
+            grid-column: 1/6
+            h2
+                font-size: 3rem
+            h3 
+                font-size: 2rem
