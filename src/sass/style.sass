@@ -1,4 +1,5 @@
 @import base/_variables
+@import base/_fonts
     
 @import blocks/_header
 
@@ -28,6 +29,7 @@ body
         outline: 2px solid $base-color
 
 .container
+    font-family: 'averia_serifitalic'
     display: grid
     grid-template-columns: 2fr 1fr 1fr
     grid-auto-flow: row
@@ -35,8 +37,11 @@ body
     margin: 0 auto
     padding: 50px 0
     text-align: center
-    max-width: 69rem
-    font-size: 1rem
+    max-width: 68rem
+    font-size: .8rem
+    p
+        margin-block-start: .5em
+        margin-block-end: .5em
 
 
 @import base/_media

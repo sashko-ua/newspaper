@@ -15,26 +15,28 @@
 @media ( max-width: 868px )
     html, body
         font-size: 10px
+    header
+        .title
+            h1
+                letter-spacing: 7px
 
 @media ( max-width: 768px ) 
     .container
-        width: 60rem
+        width: 62rem
         grid-gap: 0 15px
         font-size: 1.2rem
         grid-template-areas: 'header header header header' 'left left left left' 'article article right right'
-        p
-            margin-block-start: .5em
-            margin-block-end: .5em
     header
         display: grid
         grid-area: header
         .title
             padding: 5px
             h1
-                font-size: 5rem
+                font-size: 4rem
                 line-height: 50px
+                letter-spacing: 3px
             .right-block, .left-block
-                font-size: 1rem
+                font-size: .8rem
         .sub-title
             padding: 5px 0
             .vol, .price, h3
@@ -45,7 +47,7 @@
         margin: 5px 0 0
         .editorial-news
             h2
-                font-size: 4.5rem
+                font-size: 4rem
             h3 
                 font-size: 2rem
         .extra
@@ -99,7 +101,12 @@
 
 @media ( max-width: 650px )
     .container
-        width: 50rem
+        width: 55rem
+    header
+        .title
+            h1
+                font-size: 3.5rem
+                line-height: 46px
     .left
         grid-template-areas: 'meeting phone' ' meeting impotrant'
         .meeting
@@ -136,27 +143,49 @@
             h2
                 font-size: 2rem
 
-@media ( max-width: 525px )
+@media ( max-width: 565px )
     .container
         width: 45rem
         grid-template-areas: 'header header header header' 'left left left left' 'article article article article' 'right right right right'
+    header
+        .title
+            h1
+                font-size: 3rem
+                line-height: 30px
+            .left-block, .right-block 
+                font-size: .7rem
     .right
         display: grid
-        grid-template-areas: 'your your your your' 'paper paper img img '
-        img
+        grid-template-areas: 'your your your img' 'paper paper paper paper'
+        grid-template-columns: repeat(4, 1fr)
+        a
             grid-area: img
-            grid-column: 2/4
+            grid-column: 3/5
+            align-self: center 
         .your
             grid-area: your
-            grid-column: 1/6
+            grid-column: 1/3
             padding: 0 0 10px
         .paper
             grid-area: paper
-            grid-column: 4/6
+            grid-column: 1/6
+    .left
+        .phone
+            h2 
+                font-size: 2.5rem
 
-@media ( max-width: 460px )
+@media ( max-width: 465px )
     .container
         width: 35rem
+    .header
+        title
+            h1
+                line-height: 30
+    article
+        .two-blocks
+            .welcome
+                &__name
+                    font-size: 3rem
 
     .left
         .phone
@@ -173,7 +202,7 @@
     header
         .title
             h1
-                font-size: 4rem
+                font-size: 3.5rem
                 line-height: 35px
         .sub-title
             h3, .price,
@@ -214,12 +243,12 @@
                 h3
                     font-size: 2.5rem
                 &__name 
-                    font-size: 2.5rem
+                    font-size: 2rem
 
     .right
         display: grid
         grid-template-areas: 'your your your your' 'paper paper paper paper' 'img img img img'
-        img
+        a
             grid-column: 1/6
             margin: 0 auto
         .your
