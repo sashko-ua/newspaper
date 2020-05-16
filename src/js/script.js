@@ -1,19 +1,33 @@
-// "use strict";
-// $(document).ready(function(){
-//     $(".image").click(FUNCTION() {                       // Событие клика на маленькое изображение
-//             const img = $(THIS);                            // Получаем изображение, на которое кликнули
-//         const src = img.attr('src');                    // Достаем из этого изображения путь до картинки
+"use strict";
+$(document).ready(function(){
 
-//         $("body").append("<div class='popup'>"+         //Добавляем в тело документа разметку всплывающего окна
-//         "<div class='popup_bg'></div>"+                 // Блок, который будет служить фоном затемненным
-//         "<img src='"+src+"' class='popup_img' />"+      // Само увеличенное фото
-//         "</div>");
-//         $(".popup").fadeIn(800);                        // Медленно выводим изображение
-//         $(".popup_bg").click(FUNCTION(){                 // Событие клика на затемненный фон      
-//         $(".popup").fadeOut(800);                       // Медленно убираем всплывающее окно
-//         setTimeout(FUNCTION() {                         // Выставляем таймер
-//         $(".popup").remove();                           // Удаляем разметку всплывающего окна
-//         }, 800);
-//         });
-//         });
-// });
+    $(".img").click(function() {
+        const images = ['../img/gif/car.gif', '../img/gif/horrore.gif', '../img/gif/phone.gif', '../img/gif/tenor.gif'];
+
+        let active = images[0];
+
+        $("body").append("<div class='modal'>"+
+        "<img id='mainSrc' src='"+active+"'class='modal__content'/>"+
+        "<div class='modal__close'>"+"&times;"+"</div>"+
+        "<div id='right' class='modal__right'></div>"+
+        "<div id='left' class='modal__left'></div>");
+
+        $('#right').click(function(){
+            $('#mainSrc').attr('src', 'active');
+        });
+
+        $('#left').click(function(){
+            $('#mainSrc').attr('src', );
+        });
+        
+        $(".modal").fadeIn(800);
+
+        $(".modal__close").click(function(){
+            $(".modal").fadeOut(800);
+
+        setTimeout(function() {
+            $(".modal").remove();
+            }, 800);
+        });
+    });
+});

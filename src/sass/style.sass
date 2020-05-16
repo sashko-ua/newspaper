@@ -1,3 +1,7 @@
+// Привіт тому, хто це читає=). Я вдячний технічному відділу за таке завдання. Ажде працювати раніше з CSS Grid мені не доводилося... Це для мене новий і цікавий досвід. Відразу повинен попросити вибачення за можливо занадто корявий код.
+//     Sashko Shablenskyi
+    
+    
 @import base/_variables
 @import base/_fonts
     
@@ -13,6 +17,8 @@
 
 @import blocks/aside-right/_your
 @import blocks/aside-right/_paper
+
+@import blocks/_modal
 
 
 html
@@ -42,6 +48,10 @@ body
     p
         margin-block-start: .5em
         margin-block-end: .5em
+    img
+        &:hover
+            cursor: pointer
+            opacity: .7
 
 
 @import base/_media
